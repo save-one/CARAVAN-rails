@@ -1,8 +1,11 @@
 class BlogsController < ApplicationController
   def index
+  	# 記事を全権取得
+  	@blogs = Blog.all
   end
 
   def show
+  	@blog = Blog.find(params[:id])
   end
 
   def new
